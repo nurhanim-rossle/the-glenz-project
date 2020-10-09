@@ -1,0 +1,86 @@
+@import "~bootstrap/scss/bootstrap";
+@import './media-queries.scss';
+
+@font-face {
+    font-family: "BebasNeue";
+    src: url("/fonts/BebasNeue-Regular.woff") format("woff"),
+         url("/fonts/BebasNeue-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "NotoSerif";
+    src: url("/fonts/NotoSerif.woff") format("woff"),
+         url("/fonts/NotoSerif.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "NotoSerif-Bold";
+    src: url("/fonts/NotoSerif-Bold.woff") format("woff"),
+         url("/fonts/NotoSerif-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "NotoSerif-Regular";
+    src: url("/fonts/NotoSerif-Regular.woff") format("woff"),
+         url("/fonts/NotoSerif-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "NotoSerif-Semibold";
+    src: url("/fonts/NotoSerif-Semibold.woff") format("woff"),
+         url("/fonts/NotoSerif-Semibold.woff2") format("woff2");
+}
+
+body,html {
+    height: 100%;
+
+    font-family: "NotoSerif", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+
+    @include gt-md {
+        font-size: 20px;
+    }
+}
+
+$main-color: #000000;
+$secondary-color: #ffffff;
+$yellow: #ffb30e;
+
+.btn-primary {
+    color: #000000;
+    background-color: $yellow;
+    border-radius: 0;
+    border: 0;
+
+    font-family: "BebasNeue", Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    padding: 8px 30px;
+
+    &:hover {
+        color: #ffffff;
+        background-color: $main-color;
+    }
+
+    &:focus {
+        color: #ffffff;
+        background-color: $main-color;
+        box-shadow: none;
+    }
+
+    @include gt-md {
+        font-size: 28px;
+    }
+}
+
+a {
+    color: $yellow;
+    font-family: "BebasNeue", Arial, Helvetica, sans-serif;
+
+    @include gt-md {
+        font-size: 22px;
+    }
+
+    &:hover {
+        color: $main-color;
+    }
+}

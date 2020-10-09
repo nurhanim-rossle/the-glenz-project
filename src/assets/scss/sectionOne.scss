@@ -1,0 +1,125 @@
+@import './main.scss';
+
+#section-one {
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100vh;
+
+    padding: 0 30px;
+    
+    position: relative;
+    
+    overflow: hidden;
+    background-image: url('/images/alt-landing-hero-d.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+    &:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        background: #000000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0.5;
+    }
+
+    .content {
+        position: relative;
+        z-index: 2;
+
+        text-align: center;
+    }
+
+    h1 {
+        font-family: "NotoSerif-SemiBold", "NotoSerif-Bold", Arial, Helvetica, sans-serif;
+        color: #ffffff;
+    }
+    
+    p {
+        color: #ffffff;
+    }
+
+    .arrow {
+        position: absolute;
+        z-index: 10;
+        bottom: 40px;
+
+        a {
+            color: #ffffff;
+            font-size: 32px;
+        }
+        
+    }
+    
+    .space {
+        background-color: $yellow;
+        height: 10px;
+        border: 0;
+        z-index: 5;
+        width: 100%;
+    
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    @include gt-sm {
+        display: block;
+        width: 100%;
+        background-position: 65% 50%;
+
+        &:before {
+            content: ' ';
+            background: none;
+        }
+
+        .content {
+            position: absolute;
+
+            right: 0;
+            top: 150px;
+            z-index: 2;
+
+            padding: 3rem;
+    
+            text-align: left;
+        }
+
+        h1 {
+            color: #000000;
+            font-size: 50px;
+        }
+        
+        p {
+            color: #000000;
+        }
+
+        .arrow {
+
+            left: 50%;
+    
+            a {
+                color: #ffffff;
+                font-size: 32px;
+            }
+            
+        }
+    }
+
+}
+
+
+

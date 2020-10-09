@@ -1,0 +1,99 @@
+@import './main.scss';
+
+#footer {
+
+    padding: 2.5rem;
+    font-size: 14px;
+
+    .row {
+        padding-right: 6rem;
+    }
+
+    background-color: $main-color;
+    color: $secondary-color;
+
+    .first-col {
+        .contact {
+            .img-icon {
+                max-width: 20px;
+                margin-right: 10px;
+            }
+        }
+        
+        .social {
+            .img-icon {
+                max-height: 25px;
+        
+                &:nth-child(1) {
+                    margin-right: 30px;
+                }
+            }
+        }
+    }
+
+    .second-col {
+        ul {
+            padding: 0;
+            -webkit-column-count: 2;
+            -moz-column-count: 2;
+            column-count: 2;
+    
+            @include gt-md {
+                -webkit-column-count: 3;
+                -moz-column-count: 3;
+                column-count: 3;
+            }
+    
+            li {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+        }
+    }
+
+    .third-col  {
+        .img-awards {
+            max-width: 90px;
+            height: auto;
+        }
+
+        @include gt-md {
+            text-align: center;
+        }
+    }
+
+    hr {
+        background-color: $secondary-color;
+        height: 1px;
+        border: 0;
+    }
+
+    .copyright {
+        padding: 0;
+
+        @include gt-md {
+            .col-md:nth-child(1) {
+                text-align: right;
+            }
+        }
+    }
+
+    h6 {
+        font-family: "NotoSerif-Bold", Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        padding-bottom: 10px;
+
+        @include gt-md {
+            height: 60px;
+            font-size: 20px;
+        }
+    }
+
+    @include gt-md {
+        padding: 3rem 8rem 1rem;
+        font-size: 16px;
+    }
+}
+
+

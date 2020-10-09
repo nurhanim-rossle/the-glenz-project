@@ -1,0 +1,67 @@
+@import './main.scss';
+
+#section-four {
+
+    position: relative;
+    z-index: 1;
+    
+    padding: 2.2rem;
+
+    background-color: #e4e4e4;
+    text-align: center;
+
+    .img-content {
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+
+            max-height: 150px;
+
+            @include gt-sm {
+                max-height: 130px;
+            }
+
+            @include gt-md {
+                min-height: 200px;
+            }
+        }
+    }
+
+    .content {
+        text-align: left;
+        padding: 1.5rem;
+        background-color: white;
+
+        border-bottom: 5px solid $yellow;
+
+        @include gt-sm {
+            min-height: 220px;
+        }
+    }
+    
+    h2, h4 {
+        font-family: "NotoSerif-Bold", Arial, Helvetica, sans-serif;
+    }
+
+    @include gt-md {
+        padding: 5rem 8rem;
+    }
+
+    button {
+        color: $yellow;
+        font-family: "BebasNeue", Arial, Helvetica, sans-serif;
+
+        background-color: transparent;
+        border: 0;
+    
+        @include gt-md {
+            font-size: 22px;
+        }
+    
+        &:hover {
+            color: $main-color;
+        }
+    }
+
+}
